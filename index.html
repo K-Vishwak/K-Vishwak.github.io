@@ -1,41 +1,307 @@
-<!doctype html>
-<html class="no-js" lang="">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>K Mahesh Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+    <!-- Option 1: Include in HTML -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: Georgia, "Times New Roman", Times, serif;
+        }
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
+        @keyframes slow {
+            from {
+                max-width: 20%;
+            }
 
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
+            to {
+                max-width: 80%;
+            }
+        }
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
+        .txt-transform {
+            animation: slow 2s forwards;
+        }
 
-  <meta name="theme-color" content="#fafafa">
+        .container {
+            margin-top: 10px;
+        }
+
+        .profile {
+            width: 0;
+            height: 200px;
+            transition: 3s width;
+        }
+
+        .profile.open {
+            width: 200px;
+        }
+
+        .donwload_icon {
+            margin-left: 10px;
+        }
+
+        .mypic {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            scale: 2;
+            border-radius: 50%;
+            transform: rotate(90deg);
+            z-index: 1;
+        }
+
+        .middle_circle {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            scale: 3;
+            transform: rotate(270deg);
+            border-radius: 50%;
+            margin: auto;
+        }
+
+        .middle_circle .item {
+            display: inline-block;
+            position: absolute;
+            transition: 0.4s;
+            color: white;
+            font-size: 10px;
+            cursor: pointer;
+        }
+
+        .middle_circle .item:hover::after {
+            content: '\21A3';
+            padding-left: 2px;
+        }
+    
+
+        .middle_circle .item:nth-child(1) {
+            top: 20px;
+            left: 85px;
+        }
+
+        .middle_circle .item:nth-child(2) {
+            top: 90px;
+            left: 155px;
+        }
+
+        .middle_circle .item:nth-child(3) {
+            top: 165px;
+            left: 90px;
+        }
+
+        .middle_circle .item:nth-child(4) {
+            top: 90px;
+            left: 5px;
+        }
+
+
+        .reset_rotate {
+            transform: rotate(0deg);
+            transition: transform 3s;
+        }
+    </style>
 </head>
 
-<body>
+<body onload="onLoad()">
+    <div id="home" class="home">
+        <div id="middle" class="middle_circle bg-info">
+            <div class="item" onclick="resumeClick()">Resume</div>
+            <div class="item">Projects</div>
+            <div class="item">Work</div>
+            <div class="item">Interests</div>
+        </div>
+        <div id="low" class="low_circle">
+            <div id="mypic" class="mypic">
+                <img src="./mypic.jpg" class="img-thumbnail rounded rounded-circle" />
+            </div>
+        </div>
+    </div>
+    <div id="resume" class="container border border-info rounded p-3 txt-transform">
+        <div class="profile_pic">
+            <img src="./mypic.jpg" id="imgId" class="profile img-thumbnail rounded mx-auto d-block" />
+        </div>
+        <div class="about">
+            <h5><strong>Career Objective</strong></h5>
+            <p>
+                Looking forward to working in a challenging, creative, and innovative environment to enhance with new
+                software technologies.
+            </p>
+        </div>
+        <div class="experience_summary">
+            <h5><strong>Experience Summary</strong></h3>
+                <ul>
+                    <li>
+                        Proficient developer with 5.2 years of relevant experience in
+                        developing front-end applications and basic knowledge of writing
+                        APIs using spring boot.
+                    </li>
+                    <li>
+                        Good knowledge of required frameworks and technologies like
+                        <span class="text-info">Angular, Basic React, JavaScript, Java, CSS, and HTML.</span>
+                    </li>
+                    <li>
+                        Focused on writing bug-free code and covering all possible cases
+                        with the user's perspective while implementing.
+                    </li>
+                    <li>
+                        Efficient in fixing any issues in prod or lower environments and
+                        supported the end-users.
+                    </li>
+                    <li>
+                        Efficient in fixing any issues in prod or lower environments and
+                        supported the end-users.
+                    </li>
+                    <li>
+                        <span class="text-info">Certified as AWS cloud practitioner</span>
+                        with good knowledge of tools used on AWS cloud.
+                    </li>
+                    <li>
+                        Proficient developer with 5.2 years of relevant experience in
+                        developing front-end applications and basic knowledge of writing
+                        APIs using spring boot.
+                    </li>
+                    <li>
+                        Well-versed with tools like
+                        <span class="text-info">Git, Jira, Bitbucket, Gitlab, Bamboo, Splunk, and Kibana.</span>
+                    </li>
+                    <li>
+                        Adapting quickly to new environments and fully focused on completing
+                        priority tasks.
+                    </li>
+                    <li>
+                        Over 9.2 years of experience as a software engineer with 5.2 years
+                        as a platform engineer and the remaining as SDET.
+                    </li>
+                    <li>
+                        Played the role of developer and automation engineer simultaneously
+                        and delivered features on time.
+                    </li>
+                </ul>
+        </div>
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+        <div class="prof_experience">
+            <h5><strong>Professional Experience</strong></h5>
+            <div class="lastest_experience">
+                <div class="duration">
+                    <span>June 2022-Present</span>
+                    <span class="float-end">Hyderabad</span>
+                </div>
+                <div class="title"><strong>Lead Front End Engineer</strong> at <strong>Milestone technologies</strong>
+                </div>
+                <div class="description">
+                    <p><strong>Name:</strong> Merchant Portal</p>
+                    <p><strong>Development Type:</strong> UI and Microservices</p>
+                    <p><strong>Description:</strong> It shows Paysafe merchant's accounts, transactions, Digital Invoice
+                        details, and Reports information. Merchants log in to this portal to verify all the details.</p>
+                    <h6>Responsibilities</h6>
+                    <ol>
+                        <li>
+                            Responsible for developing UI features with Angular and writing REST APIs.
+                        </li>
+                        <li>
+                            Taking responsibility for completing assigned tasks and helping the team members with their
+                            concerns.
+                        </li>
+                        <li>
+                            Always focused on unblocking inter-team members in case of their issues.
+                        </li>
+                        <li>
+                            Setting required configurations in CI/CD, fixing the issues, and sending them to UAT on
+                            time.
+                        </li>
+                        <li>
+                            Providing support in case of issues on prod.
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="lastest_experience">
+                <div class="duration">
+                    <span>April 2017 - June 2022</span>
+                    <span class="float-end">Hyderabad</span>
+                </div>
+                <div class="title"><strong>Senior Front End Engineer</strong> at <strong>Paysafe India</strong></div>
+                <div class="description">
+                    <p><strong>Name:</strong> Customer Service center</p>
+                    <p><strong>Development Type:</strong> UI and Microservices</p>
+                    <p><strong>Description:</strong> It is a back-office application for internal users of Paysafe to
+                        provide accounts, transactions, Digital Invoice details, and Report information to merchants.
+                    </p>
+                    <h6>Responsibilities</h6>
+                    <ol>
+                        <li>
+                            Responsible for developing UI features with Angular and writing REST APIs.
+                        </li>
+                        <li>
+                            Taking responsibility for completing assigned tasks and helping the team members with their
+                            concerns.
+                        </li>
+                        <li>
+                            Always focused on unblocking inter-team members in case of their issues.
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="lastest_experience">
+                <div class="title"><strong>Front End Engineer</strong> at <strong>Milestone technologies</strong></div>
+                <div class="description">
+                    <p><strong>Name:</strong> Customer-Facing Portals</p>
+                    <p><strong>Development Type:</strong> UI and Microservices</p>
+                    <p><strong>Description:</strong> Paysafe has several customer-facing portals like a business portal,
+                        Skrill, and Neteller. I have worked on priority on all those portals and delivered them on time.
+                    </p>
+                    <h6>Responsibilities</h6>
+                    <ol>
+                        <li>
+                            Responsible for developing UI features with Angular and writing REST APIs.
+                        </li>
+                        <li>
+                            Taking responsibility for completing assigned tasks and helping the team members with their
+                            concerns.
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="download_resume">
+            <button class="btn btn-info">
+                <a href="./resume.pdf" target="_blank" class="link-dark link-underline-opacity-0">View & Donwload
+                    Resume<i class="donwload_icon bi bi-download"></i></a>
+            </button>
+        </div>
+    </div>
+    <script>
+        function onLoad() {
+            document.getElementById('imgId').classList.add('open');
+            document.getElementById('mypic').classList.add('reset_rotate');
+            document.getElementById('middle').classList.add('reset_rotate');
+            document.getElementById('resume').hidden = true;
+        }
 
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
+        function resumeClick() {
+            document.getElementById('home').hidden = true;
+            document.getElementById('resume').hidden = false;
+        }
+    </script>
 </body>
 
 </html>
