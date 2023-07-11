@@ -91,7 +91,7 @@
             content: '\21A3';
             padding-left: 2px;
         }
-    
+
 
         .middle_circle .item:nth-child(1) {
             top: 20px;
@@ -113,20 +113,44 @@
             left: 5px;
         }
 
-
         .reset_rotate {
             transform: rotate(0deg);
             transition: transform 3s;
         }
+
+        .projects {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .articles h5 {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .thumbnail {
+            width: 18rem;
+            margin: 10px;
+            opacity: .8;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .thumbnail:hover {
+            opacity: 1;
+        }
+    
     </style>
 </head>
 
 <body onload="onLoad()">
-    <div id="home" class="home">
+    <div  id="home" class="home">
         <div id="middle" class="middle_circle bg-info">
             <div class="item" onclick="resumeClick()">Resume</div>
-            <div class="item">Projects</div>
-            <div class="item">Work</div>
+            <div class="item" onclick="onProjectsClick()">Projects</div>
+            <div class="item" onclick="onArticlesClick()">Articles</div>
             <div class="item">Interests</div>
         </div>
         <div id="low" class="low_circle">
@@ -135,7 +159,7 @@
             </div>
         </div>
     </div>
-    <div id="resume" class="container border border-info rounded p-3 txt-transform">
+    <div  id="resume" class="container border border-info rounded p-3 txt-transform">
         <div class="profile_pic">
             <img src="./mypic.jpg" id="imgId" class="profile img-thumbnail rounded mx-auto d-block" />
         </div>
@@ -289,17 +313,58 @@
             </button>
         </div>
     </div>
+    <div id="projects" class="projects">
+        <div class="personal border border-info rounded p-5 txt-transform">
+            <h5 class="mb-2"><strong>Personal</strong></h5>
+            Andriod: <a href="https://play.google.com/store/apps/dev?id=8760266852356356477&hl=en" target="_blank">Google Play Apps</a>
+        </div>
+        <div class="professional mt-5 border border-info rounded p-5 txt-transform">
+            <h5 class="mb-3"><strong>Professional</strong></h5>
+            <ol>
+                <li><a href="https://merchant.paysafe.com/portal/login" target="_blank">Paysafe Merchant Portal</a></li>
+                <li> Internal: Customer Service Center</li>
+                <li> Backend: Group Communication Service</li>
+                <li><a href="https://support.ancestry.com/s/article/Discontinuation-of-AncestryHealth?language=en_US" target="_blank"> Ancetry Health</a></li>
+                <li> <a href="https://www.ancestry.com/" target="_blank">Ancetry</a></li>
+            </ol>
+        </div>
+    </div>
+    <div id="articles" class="articles">
+        <h5><strong>Articles</strong></h5>
+        <div class="thumbnail card">
+            <a href="https://dev.to/urstrulyvishwak/immutable-splice-in-javascript-5fig" target="_blank" class="link-underline link-underline-opacity-0">
+            <img src="./js.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text border-top text-info">Immutable Splice in Javascript</p>
+            </div>
+        </a>
+          </div>
+    </div>
     <script>
         function onLoad() {
             document.getElementById('imgId').classList.add('open');
             document.getElementById('mypic').classList.add('reset_rotate');
             document.getElementById('middle').classList.add('reset_rotate');
             document.getElementById('resume').hidden = true;
+            document.getElementById('projects').hidden = true;
+            document.getElementById('articles').hidden = true;
         }
 
         function resumeClick() {
             document.getElementById('home').hidden = true;
             document.getElementById('resume').hidden = false;
+        }
+
+        function onProjectsClick() {
+            document.getElementById('home').hidden = true;
+            document.getElementById('resume').hidden = true;
+            document.getElementById('projects').hidden = false;
+        }
+        function onArticlesClick() {
+            document.getElementById('home').hidden = true;
+            document.getElementById('resume').hidden = true;
+            document.getElementById('projects').hidden = true;
+            document.getElementById('articles').hidden = false;
         }
     </script>
 </body>
