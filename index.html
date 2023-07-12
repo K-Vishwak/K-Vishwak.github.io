@@ -140,13 +140,13 @@
 
         .thumbnail:hover {
             opacity: 1;
+            border-color: #ffbb00;
         }
-    
     </style>
 </head>
 
 <body onload="onLoad()">
-    <div  id="home" class="home">
+    <div hidden id="home" class="home">
         <div id="middle" class="middle_circle bg-info">
             <div class="item" onclick="resumeClick()">Resume</div>
             <div class="item" onclick="onProjectsClick()">Projects</div>
@@ -159,7 +159,7 @@
             </div>
         </div>
     </div>
-    <div  id="resume" class="container border border-info rounded p-3 txt-transform">
+    <div hidden id="resume" class="container border border-info rounded p-3 txt-transform">
         <div class="profile_pic">
             <img src="./mypic.jpg" id="imgId" class="profile img-thumbnail rounded mx-auto d-block" />
         </div>
@@ -313,10 +313,11 @@
             </button>
         </div>
     </div>
-    <div id="projects" class="projects">
+    <div hidden id="projects" class="projects">
         <div class="personal border border-info rounded p-5 txt-transform">
             <h5 class="mb-2"><strong>Personal</strong></h5>
-            Andriod: <a href="https://play.google.com/store/apps/dev?id=8760266852356356477&hl=en" target="_blank">Google Play Apps</a>
+            Andriod: <a href="https://play.google.com/store/apps/dev?id=8760266852356356477&hl=en"
+                target="_blank">Google Play Apps</a>
         </div>
         <div class="professional mt-5 border border-info rounded p-5 txt-transform">
             <h5 class="mb-3"><strong>Professional</strong></h5>
@@ -324,30 +325,241 @@
                 <li><a href="https://merchant.paysafe.com/portal/login" target="_blank">Paysafe Merchant Portal</a></li>
                 <li> Internal: Customer Service Center</li>
                 <li> Backend: Group Communication Service</li>
-                <li><a href="https://support.ancestry.com/s/article/Discontinuation-of-AncestryHealth?language=en_US" target="_blank"> Ancetry Health</a></li>
+                <li><a href="https://support.ancestry.com/s/article/Discontinuation-of-AncestryHealth?language=en_US"
+                        target="_blank"> Ancetry Health</a></li>
                 <li> <a href="https://www.ancestry.com/" target="_blank">Ancetry</a></li>
             </ol>
         </div>
     </div>
     <div id="articles" class="articles">
         <h5><strong>Articles</strong></h5>
-        <div class="thumbnail card">
-            <a href="https://dev.to/urstrulyvishwak/immutable-splice-in-javascript-5fig" target="_blank" class="link-underline link-underline-opacity-0">
-            <img src="./js.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text border-top text-info">Immutable Splice in Javascript</p>
+        <div class="container">
+            <div class="row">
+                <h5 class="border border-info rounded p-2 m-2">Javascript Articles</h5>
+                <div class="thumbnail card col">
+                    <a href="https://dev.to/urstrulyvishwak/convert-nested-json-to-simple-json-in-javascript-4a34"
+                        target="_blank" class="link-underline link-underline-opacity-0">
+                        <img src="./js.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text border-top text-warning">Convert nested JSON to simple JSON</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="thumbnail card col">
+                    <a href="https://dev.to/urstrulyvishwak/create-a-form-and-fill-form-details-in-below-table-in-javascript-1ccd"
+                        target="_blank" class="link-underline link-underline-opacity-0">
+                        <img src="./js.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text border-top text-warning">Create a form and fill form details in below table
+                                in Javascript</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="thumbnail card col">
+                    <a href="https://dev.to/urstrulyvishwak/magic-of-windowopen-in-browsers-3ioc" target="_blank"
+                        class="link-underline link-underline-opacity-0">
+                        <img src="./js.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text border-top text-warning">Magic of window.open in browsers</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="thumbnail card col">
+                    <a href="https://dev.to/urstrulyvishwak/spiral-matrix-in-javascript-2hii" target="_blank"
+                        class="link-underline link-underline-opacity-0">
+                        <img src="./js.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text border-top text-warning">Spiral Matrix in Javascript</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="thumbnail card col">
+                    <a href="https://dev.to/urstrulyvishwak/javascript-how-much-do-you-debug-41h" target="_blank"
+                        class="link-underline link-underline-opacity-0">
+                        <img src="./js.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text border-top text-warning">Javascript: How much do you debug?</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="w-100"></div>
+                <div class="thumbnail card col">
+                    <a href="https://dev.to/urstrulyvishwak/mistakes-per-day-in-js-9lf" target="_blank"
+                        class="link-underline link-underline-opacity-0">
+                        <img src="./js.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text border-top text-warning">Javascript: Mistakes per day</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="thumbnail card col">
+                    <a href="https://dev.to/urstrulyvishwak/immutable-splice-in-javascript-5fig" target="_blank"
+                        class="link-underline link-underline-opacity-0">
+                        <img src="./js.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text border-top text-warning">Immutable Splice in Javascript</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="thumbnail card col">
+                    <a href="https://dev.to/urstrulyvishwak/js-declarative-vs-imperative-programming-style-5g57"
+                        target="_blank" class="link-underline link-underline-opacity-0">
+                        <img src="./js.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text border-top text-warning">Javascript: Declarative vs Imperative programming
+                                style</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="thumbnail card col">
+                    <a href="https://dev.to/urstrulyvishwak/find-path-in-given-object-2il8" target="_blank"
+                        class="link-underline link-underline-opacity-0">
+                        <img src="./js.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text border-top text-warning">Find path in given object</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="thumbnail card col">
+                    <a href="https://dev.to/urstrulyvishwak/simplified-type-coercion-in-js-36ge" target="_blank"
+                        class="link-underline link-underline-opacity-0">
+                        <img src="./js.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text border-top text-warning">Javascript: Simplified Type Coercion</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="w-100"></div>
+                <div class="thumbnail card">
+                    <a href="https://dev.to/urstrulyvishwak" target="_blank"
+                        class="link-underline link-underline-opacity-0">
+                        <img src="./js.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text border-top text-warning">More 53 Articles...</p>
+                        </div>
+                    </a>
+                </div>
             </div>
-        </a>
-          </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <h5 class="border border-info rounded p-2 m-2">Angular Articles</h5>
+                <div class="thumbnail card">
+                    <a href="https://dev.to/urstrulyvishwak/star-rating-with-no-external-libraries-in-angular-1lp5"
+                        target="_blank" class="link-underline link-underline-opacity-0">
+                        <img src="./angular.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text border-top text-danger">Angular: Star rating with no external libraries
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="thumbnail card">
+                    <a href="https://dev.to/urstrulyvishwak/angular-content-projection-end-to-end-2mid" target="_blank"
+                        class="link-underline link-underline-opacity-0">
+                        <img src="./angular.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text border-top text-danger">Angular: Content Projection end to end</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="thumbnail card">
+                    <a href="https://dev.to/urstrulyvishwak/binding-in-angular-32kd" target="_blank"
+                        class="link-underline link-underline-opacity-0">
+                        <img src="./angular.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text border-top text-danger">Angular: Binding end to end</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="thumbnail card">
+                    <a href="https://dev.to/urstrulyvishwak/interview-basic-horizontal-nav-bar-g5c" target="_blank"
+                        class="link-underline link-underline-opacity-0">
+                        <img src="./angular.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text border-top text-danger">Interview: Basic Horizontal Nav Bar</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="thumbnail card">
+                    <a href="https://dev.to/urstrulyvishwak/angular-creating-angular-client-library-4a84"
+                        target="_blank" class="link-underline link-underline-opacity-0">
+                        <img src="./angular.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text border-top text-danger">Angular: Creating Angular Client Library</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <h5 class="border border-info rounded p-2 m-2">HTML & CSS Articles</h5>
+                <div class="thumbnail card">
+                    <a href="https://dev.to/urstrulyvishwak/html-display-tooltip-with-only-html-2e2k"
+                        target="_blank" class="link-underline link-underline-opacity-0">
+                        <img src="./htmlcss.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text border-top text-info">HTML: Display tooltip with only HTML</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="thumbnail card">
+                    <a href="https://dev.to/urstrulyvishwak/html-select-vs-datalist-47i0" target="_blank"
+                        class="link-underline link-underline-opacity-0">
+                        <img src="./htmlcss.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text border-top text-info">HTML: select vs datalist</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="thumbnail card">
+                    <a href="https://dev.to/urstrulyvishwak/simple-search-box-with-icon-274l" target="_blank"
+                        class="link-underline link-underline-opacity-0">
+                        <img src="./htmlcss.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text border-top text-info">Simple Search box with icon</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="thumbnail card">
+                    <a href="https://dev.to/urstrulyvishwak/why-transformtranslate-50-50-to-center-element-15m1 " target="_blank"
+                        class="link-underline link-underline-opacity-0">
+                        <img src="./htmlcss.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text border-top text-info">Why transform:translate(-50%, -50%) to center element?</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="thumbnail card">
+                    <a href="https://dev.to/urstrulyvishwak/css-variables-end-to-end-4dej"
+                        target="_blank" class="link-underline link-underline-opacity-0">
+                        <img src="./htmlcss.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text border-top text-info">CSS Variables end to end</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="thumbnail card">
+                    <a href="https://dev.to/urstrulyvishwak/css-visibilityhidden-vs-displaynone-3p9c"
+                        target="_blank" class="link-underline link-underline-opacity-0">
+                        <img src="./htmlcss.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text border-top text-info">CSS: visibility:hidden vs display:none</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
     <script>
         function onLoad() {
             document.getElementById('imgId').classList.add('open');
             document.getElementById('mypic').classList.add('reset_rotate');
             document.getElementById('middle').classList.add('reset_rotate');
-            document.getElementById('resume').hidden = true;
-            document.getElementById('projects').hidden = true;
-            document.getElementById('articles').hidden = true;
+            // document.getElementById('resume').hidden = true;
+            // document.getElementById('projects').hidden = true;
+            // document.getElementById('articles').hidden = true;
         }
 
         function resumeClick() {
