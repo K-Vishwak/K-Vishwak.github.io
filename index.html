@@ -118,7 +118,7 @@
             transition: transform 3s;
         }
 
-        .projects {
+        .projects, .interests {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -148,10 +148,10 @@
 <body onload="onLoad()">
     <div id="home" class="home">
         <div id="middle" class="middle_circle bg-info">
-            <div class="item" onclick="resumeClick()">Resume</div>
-            <div class="item" onclick="onProjectsClick()">Projects</div>
-            <div class="item" onclick="onArticlesClick()">Articles</div>
-            <div class="item">Interests</div>
+            <div class="item" onclick="onClick();document.getElementById('resume').hidden = false">Resume</div>
+            <div class="item" onclick="onClick();document.getElementById('projects').hidden = false">Projects</div>
+            <div class="item" onclick="onClick();document.getElementById('articles').hidden = false">Articles</div>
+            <div class="item" onclick="onClick();document.getElementById('interests').hidden = false">Interests</div>
         </div>
         <div id="low" class="low_circle">
             <div id="mypic" class="mypic">
@@ -552,6 +552,23 @@
             </div>
         </div>
     </div>
+    <div id="interests" class="interests">
+        <div class="personal border border-info rounded p-5 txt-transform">
+            <h5 class="mb-2"><strong>Interests</strong></h5>
+            <ul>
+                <li>
+                    Excited to learn new technologies
+                </li>
+                <li>
+                    Pratilipi: <a href="https://telugu.pratilipi.com/user/%E0%B0%B5%E0%B0%BF%E0%B0%B6%E0%B1%8D%E0%B0%B5%E0%B0%95%E0%B1%8D-f3g3304eo8"
+                    target="_blank">Telugu Writings</a>
+                </li>
+                <li>
+                    <p>NGO: Running an NGO to serve people in need</p>
+                </li>
+            </ul>
+        </div>
+    </div>
     <script>
         function onLoad() {
             document.getElementById('imgId').classList.add('open');
@@ -560,24 +577,13 @@
             document.getElementById('resume').hidden = true;
             document.getElementById('projects').hidden = true;
             document.getElementById('articles').hidden = true;
+            document.getElementById('interests').hidden = true;
         }
 
-        function resumeClick() {
+        function onClick() {
             document.getElementById('home').hidden = true;
-            document.getElementById('resume').hidden = false;
         }
-
-        function onProjectsClick() {
-            document.getElementById('home').hidden = true;
-            document.getElementById('resume').hidden = true;
-            document.getElementById('projects').hidden = false;
-        }
-        function onArticlesClick() {
-            document.getElementById('home').hidden = true;
-            document.getElementById('resume').hidden = true;
-            document.getElementById('projects').hidden = true;
-            document.getElementById('articles').hidden = false;
-        }
+        
     </script>
 </body>
 
