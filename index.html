@@ -146,7 +146,7 @@
 </head>
 
 <body onload="onLoad()">
-    <div hidden id="home" class="home">
+    <div id="home" class="home">
         <div id="middle" class="middle_circle bg-info">
             <div class="item" onclick="resumeClick()">Resume</div>
             <div class="item" onclick="onProjectsClick()">Projects</div>
@@ -159,7 +159,7 @@
             </div>
         </div>
     </div>
-    <div hidden id="resume" class="container border border-info rounded p-3 txt-transform">
+    <div id="resume" class="container border border-info rounded p-3 txt-transform">
         <div class="profile_pic">
             <img src="./mypic.jpg" id="imgId" class="profile img-thumbnail rounded mx-auto d-block" />
         </div>
@@ -313,7 +313,7 @@
             </button>
         </div>
     </div>
-    <div hidden id="projects" class="projects">
+    <div id="projects" class="projects">
         <div class="personal border border-info rounded p-5 txt-transform">
             <h5 class="mb-2"><strong>Personal</strong></h5>
             Andriod: <a href="https://play.google.com/store/apps/dev?id=8760266852356356477&hl=en"
@@ -557,9 +557,9 @@
             document.getElementById('imgId').classList.add('open');
             document.getElementById('mypic').classList.add('reset_rotate');
             document.getElementById('middle').classList.add('reset_rotate');
-            // document.getElementById('resume').hidden = true;
-            // document.getElementById('projects').hidden = true;
-            // document.getElementById('articles').hidden = true;
+            document.getElementById('resume').hidden = true;
+            document.getElementById('projects').hidden = true;
+            document.getElementById('articles').hidden = true;
         }
 
         function resumeClick() {
