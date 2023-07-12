@@ -118,7 +118,8 @@
             transition: transform 3s;
         }
 
-        .projects, .interests {
+        .projects,
+        .interests {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -350,7 +351,8 @@
                         target="_blank" class="link-underline link-underline-opacity-0">
                         <img src="./js.png" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <p class="card-text border-top text-warning">Create a form and fill form details in below table
+                            <p class="card-text border-top text-warning">Create a form and fill form details in below
+                                table
                                 in Javascript</p>
                         </div>
                     </a>
@@ -406,7 +408,8 @@
                         target="_blank" class="link-underline link-underline-opacity-0">
                         <img src="./js.png" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <p class="card-text border-top text-warning">Javascript: Declarative vs Imperative programming
+                            <p class="card-text border-top text-warning">Javascript: Declarative vs Imperative
+                                programming
                                 style</p>
                         </div>
                     </a>
@@ -496,8 +499,8 @@
             <div class="row">
                 <h5 class="border border-info rounded p-2 m-2">HTML & CSS Articles</h5>
                 <div class="thumbnail card">
-                    <a href="https://dev.to/urstrulyvishwak/html-display-tooltip-with-only-html-2e2k"
-                        target="_blank" class="link-underline link-underline-opacity-0">
+                    <a href="https://dev.to/urstrulyvishwak/html-display-tooltip-with-only-html-2e2k" target="_blank"
+                        class="link-underline link-underline-opacity-0">
                         <img src="./htmlcss.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <p class="card-text border-top text-info">HTML: Display tooltip with only HTML</p>
@@ -523,17 +526,18 @@
                     </a>
                 </div>
                 <div class="thumbnail card">
-                    <a href="https://dev.to/urstrulyvishwak/why-transformtranslate-50-50-to-center-element-15m1 " target="_blank"
-                        class="link-underline link-underline-opacity-0">
+                    <a href="https://dev.to/urstrulyvishwak/why-transformtranslate-50-50-to-center-element-15m1 "
+                        target="_blank" class="link-underline link-underline-opacity-0">
                         <img src="./htmlcss.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <p class="card-text border-top text-info">Why transform:translate(-50%, -50%) to center element?</p>
+                            <p class="card-text border-top text-info">Why transform:translate(-50%, -50%) to center
+                                element?</p>
                         </div>
                     </a>
                 </div>
                 <div class="thumbnail card">
-                    <a href="https://dev.to/urstrulyvishwak/css-variables-end-to-end-4dej"
-                        target="_blank" class="link-underline link-underline-opacity-0">
+                    <a href="https://dev.to/urstrulyvishwak/css-variables-end-to-end-4dej" target="_blank"
+                        class="link-underline link-underline-opacity-0">
                         <img src="./htmlcss.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <p class="card-text border-top text-info">CSS Variables end to end</p>
@@ -541,8 +545,8 @@
                     </a>
                 </div>
                 <div class="thumbnail card">
-                    <a href="https://dev.to/urstrulyvishwak/css-visibilityhidden-vs-displaynone-3p9c"
-                        target="_blank" class="link-underline link-underline-opacity-0">
+                    <a href="https://dev.to/urstrulyvishwak/css-visibilityhidden-vs-displaynone-3p9c" target="_blank"
+                        class="link-underline link-underline-opacity-0">
                         <img src="./htmlcss.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <p class="card-text border-top text-info">CSS: visibility:hidden vs display:none</p>
@@ -560,8 +564,14 @@
                     Excited to learn new technologies
                 </li>
                 <li>
-                    Pratilipi: <a href="https://telugu.pratilipi.com/user/%E0%B0%B5%E0%B0%BF%E0%B0%B6%E0%B1%8D%E0%B0%B5%E0%B0%95%E0%B1%8D-f3g3304eo8"
-                    target="_blank">Telugu Writings</a>
+                    Teaching: <a
+                        href="https://www.youtube.com/watch?v=eYXbCW4T73s&list=PLfEj1a-AwQ16HgpUuyHcqFGFGlBz8GNuh"
+                        target="_blank">Javascript Tips & Tricks</a>
+                </li>
+                <li>
+                    Pratilipi: <a
+                        href="https://telugu.pratilipi.com/user/%E0%B0%B5%E0%B0%BF%E0%B0%B6%E0%B1%8D%E0%B0%B5%E0%B0%95%E0%B1%8D-f3g3304eo8"
+                        target="_blank">Telugu Writings</a>
                 </li>
                 <li>
                     <p>NGO: Running an NGO to serve people in need</p>
@@ -577,13 +587,14 @@
             document.getElementById('resume').hidden = true;
             document.getElementById('projects').hidden = true;
             document.getElementById('articles').hidden = true;
-            document.getElementById('interests').hidden = true;
+            document.getElementById('interests').hidden = false;
+            document.getElementById('home').hidden = true;
         }
 
         function onClick() {
             document.getElementById('home').hidden = true;
         }
-        
+
     </script>
 </body>
 
