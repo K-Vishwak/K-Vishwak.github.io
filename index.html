@@ -143,6 +143,15 @@
             opacity: 1;
             border-color: #ffbb00;
         }
+        .back::before {
+            content: '\21A2';
+            padding-right: 2px;
+            font-size: 25px;
+        }
+        .articles_back  {
+            padding-left: 65px;
+        }
+
     </style>
 </head>
 
@@ -161,6 +170,7 @@
         </div>
     </div>
     <div id="resume" class="container border border-info rounded p-3 txt-transform">
+        <a class="back link-underline link-underline-opacity-0 text-info" href="javascript:;" onclick="location.reload(true);">Back</a>
         <div class="profile_pic">
             <img src="./mypic.jpg" id="imgId" class="profile img-thumbnail rounded mx-auto d-block" />
         </div>
@@ -222,7 +232,6 @@
                     </li>
                 </ul>
         </div>
-
         <div class="prof_experience">
             <h5><strong>Professional Experience</strong></h5>
             <div class="lastest_experience">
@@ -315,6 +324,7 @@
         </div>
     </div>
     <div id="projects" class="projects">
+        <a class="back link-underline link-underline-opacity-0 text-info" href="javascript:;" onclick="location.reload(true);">Back</a>
         <div class="personal border border-info rounded p-5 txt-transform">
             <h5 class="mb-2"><strong>Personal</strong></h5>
             Andriod: <a href="https://play.google.com/store/apps/dev?id=8760266852356356477&hl=en"
@@ -334,6 +344,7 @@
     </div>
     <div id="articles" class="articles">
         <h5><strong>Articles</strong></h5>
+        <a class="back articles_back link-underline link-underline-opacity-0 text-info" href="javascript:;" onclick="location.reload(true);">Back</a>
         <div class="container">
             <div class="row">
                 <h5 class="border border-info rounded p-2 m-2">Javascript Articles</h5>
@@ -557,6 +568,7 @@
         </div>
     </div>
     <div id="interests" class="interests">
+        <a class="back link-underline link-underline-opacity-0 text-info" href="javascript:;" onclick="location.reload(true);">Back</a>
         <div class="personal border border-info rounded p-5 txt-transform">
             <h5 class="mb-2"><strong>Interests</strong></h5>
             <ul>
