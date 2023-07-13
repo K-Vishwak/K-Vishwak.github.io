@@ -87,12 +87,6 @@
             cursor: pointer;
         }
 
-        .middle_circle .item:hover::after {
-            content: '\21A3';
-            padding-left: 2px;
-        }
-
-
         .middle_circle .item:nth-child(1) {
             top: 20px;
             left: 85px;
@@ -113,13 +107,23 @@
             left: 5px;
         }
 
+        .middle_circle .item:nth-child(5) {
+            top: 135px;
+            right: 30px;
+        }
+
+        .middle_circle .item:hover::after {
+            content: '\21A3';
+            padding-left: 2px;
+        }
+
         .reset_rotate {
             transform: rotate(0deg);
             transition: transform 3s;
         }
 
         .projects,
-        .interests {
+        .interests, .contact {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -162,6 +166,7 @@
             <div class="item" onclick="onClick();document.getElementById('projects').hidden = false">Projects</div>
             <div class="item" onclick="onClick();document.getElementById('articles').hidden = false">Articles</div>
             <div class="item" onclick="onClick();document.getElementById('interests').hidden = false">Interests</div>
+            <div class="item" onclick="onClick();document.getElementById('contact').hidden = false">Contact</div>
         </div>
         <div id="low" class="low_circle">
             <div id="mypic" class="mypic">
@@ -591,6 +596,29 @@
             </ul>
         </div>
     </div>
+    <div id="contact" class="contact">
+        <a class="back link-underline link-underline-opacity-0 text-info" href="javascript:;" onclick="location.reload(true);">Back</a>
+        <div class="personal border border-info rounded p-5 txt-transform">
+            <h5 class="mb-2"><strong>Contact</strong></h5>
+            <ul>
+                <li>
+                    Phone: <a class="link-underline link-underline-opacity-0 text-info"
+                        href="tel:+91 8639277261"
+                        target="_blank">+91 8639277261</a>
+                </li>
+                <li>
+                    Email: <a class="link-underline link-underline-opacity-0 text-info"
+                        href="mailto:vishwak.kurapati@gmail.com"
+                        target="_blank">vishwak.kurapati@gmail.com</a>
+                </li>
+                <li>
+                    Twitter: <a class="link-underline link-underline-opacity-0 text-info"
+                        href="https://twitter.com/urstrulyvishwak"
+                        target="popup" onclick="window.open('https://twitter.com/urstrulyvishwak','Mahesh Kurapati','width=800,height=600')">@urstrulyvishwak</a>
+                </li>
+            </ul>
+        </div>
+    </div>
     <script>
         function onLoad() {
             document.getElementById('imgId').classList.add('open');
@@ -600,6 +628,7 @@
             document.getElementById('projects').hidden = true;
             document.getElementById('articles').hidden = true;
             document.getElementById('interests').hidden = true;
+            document.getElementById('contact').hidden = true;
             // document.getElementById('home').hidden = true;
         }
 
@@ -611,3 +640,8 @@
 </body>
 
 </html>
+
+book
+newsletter
+Photos
+Timeline
