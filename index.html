@@ -112,6 +112,11 @@
             right: 30px;
         }
 
+        .middle_circle .item:nth-child(6) {
+            top: 135px;
+            left: 30px;
+        }
+
         .middle_circle .item:hover::after {
             content: '\21A3';
             padding-left: 2px;
@@ -123,7 +128,9 @@
         }
 
         .projects,
-        .interests, .contact {
+        .interests,
+        .contact,
+        .timeline {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -147,15 +154,20 @@
             opacity: 1;
             border-color: #ffbb00;
         }
+
         .back::before {
             content: '\21A2';
             padding-right: 2px;
             font-size: 25px;
         }
-        .articles_back  {
+
+        .articles_back {
             padding-left: 65px;
         }
 
+        .timeline li {
+            margin: 30px
+        }
     </style>
 </head>
 
@@ -167,6 +179,7 @@
             <div class="item" onclick="onClick();document.getElementById('articles').hidden = false">Articles</div>
             <div class="item" onclick="onClick();document.getElementById('interests').hidden = false">Interests</div>
             <div class="item" onclick="onClick();document.getElementById('contact').hidden = false">Contact</div>
+            <div class="item" onclick="onClick();document.getElementById('timeline').hidden = false">Timeline</div>
         </div>
         <div id="low" class="low_circle">
             <div id="mypic" class="mypic">
@@ -175,7 +188,8 @@
         </div>
     </div>
     <div id="resume" class="container border border-info rounded p-3 txt-transform">
-        <a class="back link-underline link-underline-opacity-0 text-info" href="javascript:;" onclick="location.reload(true);">Back</a>
+        <a class="back link-underline link-underline-opacity-0 text-info" href="javascript:;"
+            onclick="location.reload(true);">Back</a>
         <div class="profile_pic">
             <img src="./mypic.jpg" id="imgId" class="profile img-thumbnail rounded mx-auto d-block" />
         </div>
@@ -329,7 +343,8 @@
         </div>
     </div>
     <div id="projects" class="projects">
-        <a class="back link-underline link-underline-opacity-0 text-info" href="javascript:;" onclick="location.reload(true);">Back</a>
+        <a class="back link-underline link-underline-opacity-0 text-info" href="javascript:;"
+            onclick="location.reload(true);">Back</a>
         <div class="personal border border-info rounded p-5 txt-transform">
             <h5 class="mb-2"><strong>Personal</strong></h5>
             Andriod: <a href="https://play.google.com/store/apps/dev?id=8760266852356356477&hl=en"
@@ -349,7 +364,8 @@
     </div>
     <div id="articles" class="articles">
         <h5><strong>Articles</strong></h5>
-        <a class="back articles_back link-underline link-underline-opacity-0 text-info" href="javascript:;" onclick="location.reload(true);">Back</a>
+        <a class="back articles_back link-underline link-underline-opacity-0 text-info" href="javascript:;"
+            onclick="location.reload(true);">Back</a>
         <div class="container">
             <div class="row">
                 <h5 class="border border-info rounded p-2 m-2">Javascript Articles</h5>
@@ -573,7 +589,8 @@
         </div>
     </div>
     <div id="interests" class="interests">
-        <a class="back link-underline link-underline-opacity-0 text-info" href="javascript:;" onclick="location.reload(true);">Back</a>
+        <a class="back link-underline link-underline-opacity-0 text-info" href="javascript:;"
+            onclick="location.reload(true);">Back</a>
         <div class="personal border border-info rounded p-5 txt-transform">
             <h5 class="mb-2"><strong>Interests</strong></h5>
             <ul>
@@ -597,24 +614,53 @@
         </div>
     </div>
     <div id="contact" class="contact">
-        <a class="back link-underline link-underline-opacity-0 text-info" href="javascript:;" onclick="location.reload(true);">Back</a>
+        <a class="back link-underline link-underline-opacity-0 text-info" href="javascript:;"
+            onclick="location.reload(true);">Back</a>
         <div class="personal border border-info rounded p-5 txt-transform">
             <h5 class="mb-2"><strong>Contact</strong></h5>
             <ul>
                 <li>
-                    Phone: <a class="link-underline link-underline-opacity-0 text-info"
-                        href="tel:+91 8639277261"
+                    Phone: <a class="link-underline link-underline-opacity-0 text-info" href="tel:+91 8639277261"
                         target="_blank">+91 8639277261</a>
                 </li>
                 <li>
                     Email: <a class="link-underline link-underline-opacity-0 text-info"
-                        href="mailto:vishwak.kurapati@gmail.com"
-                        target="_blank">vishwak.kurapati@gmail.com</a>
+                        href="mailto:vishwak.kurapati@gmail.com" target="_blank">vishwak.kurapati@gmail.com</a>
                 </li>
                 <li>
                     Twitter: <a class="link-underline link-underline-opacity-0 text-info"
-                        href="https://twitter.com/urstrulyvishwak"
-                        target="popup" onclick="window.open('https://twitter.com/urstrulyvishwak','Mahesh Kurapati','width=800,height=600')">@urstrulyvishwak</a>
+                        href="https://twitter.com/urstrulyvishwak" target="popup"
+                        onclick="window.open('https://twitter.com/urstrulyvishwak','Mahesh Kurapati','width=800,height=600')">@urstrulyvishwak</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="timeline" class="timeline">
+        <a class="back link-underline link-underline-opacity-0 text-info" href="javascript:;"
+            onclick="location.reload(true);">Back</a>
+        <div class="personal border border-info rounded p-5 txt-transform">
+            <h5 class="mb-2"><strong>Timeline</strong></h5>
+            <ul>
+                <li>
+                    <strong>1992:</strong> Born in Shalapalli, Warangal.
+                </li>
+                <li>
+                    <strong>2007:</strong> Completed 10th standard in ZPHS Velair School, Warangal.
+                </li>
+                <li>
+                    <strong>2009:</strong> Completed 12th in Sri Vikas Juniior College, Hanamkonda, Warangal.
+                </li>
+                <li>
+                    <strong>2013:</strong> Completed Graduation in Sree Chaitanya Inst. of technological sciences, Karimnagar.
+                </li>
+                <li>
+                    <strong>2014:</strong> Started career as Testing Engineer in ZenQ Pvt. Ltd., Hyderabad.
+                </li>
+                <li>
+                    <strong>2017:</strong> Joined Paysafe India LLP as SDET and transitioned as Front End Engineer, Hyderabad.
+                </li>
+                <li>
+                    <strong>2022:</strong> Currently working with Milestone technologies which acquired Paysafe India LLP, Hyderabad.
                 </li>
             </ul>
         </div>
@@ -629,6 +675,7 @@
             document.getElementById('articles').hidden = true;
             document.getElementById('interests').hidden = true;
             document.getElementById('contact').hidden = true;
+            document.getElementById('timeline').hidden = true;
             // document.getElementById('home').hidden = true;
         }
 
@@ -640,9 +687,3 @@
 </body>
 
 </html>
-
-<!-- book
-newsletter
-Photos
-Timeline
-Publications -->
